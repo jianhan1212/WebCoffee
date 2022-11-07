@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>夏日櫻桃咖啡館-點餐系統</title>
+  
+  {% load static %}
+  
+  <!-- css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
+  <link rel="stylesheet" href="{% static  "onlinecss/style.css" %}" type="text/css">
+  <link rel="icon" type="images/favicon.jpg" href="{% static 'images/favicon.jpg' %}">
+  
+</head>
+
+<body>
+  <!-- 標題區 -->
+  <header>
+    <div class="top_bar flex_center">
+      <div class="shop_name">夏日櫻桃咖啡館-點餐頁面</div>
+      <div class="login"><a href="/login/"><img src="{% static "images/usericon.png" %}" alt="會員登入"></a></div>
+      <div class="login"><a href="/index/"><img src="{% static "images/home.png" %}" alt="回到首頁"></a></div>
+    </div>
+  </header>
+  <div>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="#menu1">咖啡</a></li>
+        <li><a href="#menu2">奶蓋鹽系列</a></li>
+        <li><a href="#">下午茶系列</a></li>
+        <li><a href="#">重新發覺果汁</a></li>
+        <li><a href="#">下午茶系列</a></li>
+        <li><a href="#">咖哩飯系列</a></li>
+        <li><a href="#">義大利麵</a></li>
+        <li><a href="#">焗烤</a></li>
+        <li><a href="#">輕食系列</a></li>
+        <li><a href="#">點心/濃湯</a></li>
+      </ul>
+    </nav>
+  </div>
+<div class="bgorder" id="menubg">
+  <div class="wrapper grid" id="menu1" >
+    {% for product in productall %}
+      <div class="block_product pro_photo">
+        <div class="pro_photo">
+          <img class="photo" src="/static/images/{{product.pimages}}" alt="產品詳細資料" width="200" height="200"/>
+          <div class="pro_name">{{product.pname}}</div>
+          <div class="pro_price">$ {{product.pprice}}</div>
+          <div class="pro_btn">
+            <a href="/addtocart/add/{{product.id}}/"><img src="{% static "images/icon_cart.png" %}" height="27" border="0" /></a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+
+  {% comment %} <div class="wrapper grid" id="menu2">
+    {% for product in productall %}
+      {% if product.id >= 6 and product.id < 11 %}
+      <div class="block_product pro_photo">
+        <div class="pro_photo">
+          <img class="photo" src="/static/images/{{product.pimages}}" alt="產品詳細資料" width="200" height="200"/>
+          <div class="pro_name">{{product.pname}}</div>
+          <div class="pro_price">$ {{product.pprice}}</div>
+          <div class="pro_btn">
+            <a href="/addtocart/add/{{product.id}}/"><img src="{% static "images/icon_cart.png" %}" height="27" border="0" /></a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>  {% endcomment %}
+
+  
+<div class="payinfo">
+  <div class="checkout">
+    <h2>訂單小計：{{grandtotal}}</h2>
+    <a class="button" href="/cart/">訂單結帳</a>
+  </div> 
+</div>
+</div>
+
+</body>
+
+</html>

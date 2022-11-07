@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/* 共通部份
+-------------------------------- */
+html {
+    font-size: 100%;
+  }
+  
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 2.7;
+    background-color: rgb(255, 255, 255);
+  }
+  
+a {
+    text-decoration: none;
+    /* 去除超連結底線  */
+  }
+  
+img {
+    max-width: 100%;
+  }
+
+
+  /* header標題  */
+
+.login{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    align-items: flex-end;
+}
+
+header .top_bar {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    
+}
+
+header .top_bar .shop_name {
+    width: 100%;
+    padding: 0 0 0 15px;
+    font-weight:600;
+    overflow: auto; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align:center;
+    font-size:23px;
+    margin-top: auto;
+}
+
+.flex_center {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.main-nav {
+    display:flex;
+    font-size: 0.90rem;
+    margin-top: 20px;
+    list-style:none;
+    justify-content:space-around;
+    overflow: auto;
+    background: #dbdbdb;
+}
+
+.main-nav li {
+margin:10px 10px;
+border: 0px solid;
+border-radius: 20px;
+background-color: #ffffff;
+width:180px;
+text-align:center;
+font-weight: bolder;
+}
+
+.main-nav li a{
+    color: rgb(0, 0, 0);
+}
+.main-nav :hover{
+  background-color: rgb(215, 190, 190);
+}
+
+.grid{
+    display: grid;
+    gap: 50px;;
+    grid-template-columns: repeat(4,minmax(240px,2fr)) ;
+    margin-top: 6%;
+    margin-bottom: 90px;
+    padding: 0px 0px 0px 90px;
+  }
+
+  .block_product {
+    float: left;
+    height: 325px;
+    width: 210px;
+    background-color: #d1d2d9;
+    border-radius: 20px 20px 20px 20px;
+    border: 1.5px solid rgb(191, 188, 188);
+    /* [disabled]margin-top: 10px; */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+    -webkit-transition: background-color 10ms ease 0s;
+    -moz-transition: background-color 10ms ease 0s;
+    -ms-transition: background-color 10ms ease 0s;
+    -o-transition: background-color 10ms ease 0s;
+    transition: background-color 10ms ease 0s;
+  }
+  .block_product:hover {
+    background-color: #CCC;
+  }
+  .block_product .pro_photo {
+    height: 135px;
+    width: 135px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    -webkit-transition: color;
+    -moz-transition: color;
+    -ms-transition: color;
+    -o-transition: color;
+    transition: color;
+  }
+  .photo{
+    width:200px;
+    height:200px;
+    border-radius: 15%;
+  }
+
+
+  .block_product .pro_photo .pro_name {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 10pt;
+    font-weight: bolder;
+    color: #666;
+    height: 3.2em;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 2px;
+  }
+  .block_product .pro_photo .pro_price {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: #F00;
+    text-align: center;
+  }
+  .block_product .pro_photo .pro_btn {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .checkout{
+    display: flex;
+    justify-content: space-around;
+  }
+  .payinfo{
+    margin-bottom: 30px;
+  }
+
+  input{
+    margin-left: 13px;
+    padding: 10px 10px;
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    line-height: 1;
+    border:2px #000 solid;
+    background-color: rgb(182, 188, 220);
+    font-size: 18px;
+  }
+
+  .button{
+    border: 2px #000 solid;
+    border-radius: 10px;
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    line-height:1.9;
+    background-color: rgb(197, 201, 217);
+  }
+
+
+/* 購物車頁面-------------------------- */
+  #maindiv {
+    width: 550px;
+    margin: 50px 0px 100px 350px;
+    float:left;
+    border: 4px inset #CCC;
+    padding: 10px 10px 10px 10px;
+  }
+
+
+  #form1 {
+    margin: 0px;
+  }
+  #form1 th {
+    color: #FFF;
+    background-color: #999;
+  }
+
+
+  .title {
+    color: #000;
+    background-color: #F90;
+    display: block;
+    padding: 5px;
+    width: 120px;
+    text-align: center;
+    text-shadow: 1px 1px #CCC;
+    font-weight: bold;
+  }
+
+  .bgorder {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  #menubg{
+    background-image: url(../images/orderbg.jpg);
+    min-height:100vh;
+  }

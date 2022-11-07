@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="/static/images/favicon.png/">
+  <title>夏日櫻桃咖啡館</title>
+  <meta name="description" content="提供咖啡與餐點">
+  {% load static %}
+  <!-- css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
+  <link rel="stylesheet" href="{% static  "css/style.css" %}" type="text/css">
+</head>
+
+<body>
+  <div class="big-bg" id="home">
+    <!-- 標題區 -->
+    <header class="page-header wrapper">
+      <h1><a href="/index/"><img class="logo" src="/static/images/logo.svg/" alt="CherryCoffee首頁"></a></h1>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="/news/">News</a></li>
+          <li><a href="/menu/">Menu</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="home-content wrapper">
+      <h2 class="page-title">We'll Make Your Day</h2>
+      <p>待在咖啡廳放鬆身心。用無人工添加物的食材讓身體由內而外煥然一新。</p>
+      <a class="button" href="/news/">最新消息</a>
+      <a class="button" href="/menu/">菜單介紹</a>
+      <a class="button" href="/contact/">與我聯絡</a>
+    </div>
+  </div>
+</body>
+
+</html>
